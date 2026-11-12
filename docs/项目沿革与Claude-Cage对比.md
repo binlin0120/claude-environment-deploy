@@ -1,6 +1,6 @@
 # 项目沿革与 Claude-Cage 对比
 
-整理日期：2026-11-12。本页说明本仓库的来源、此前交流和不同方案的适用边界。
+整理日期：2026-11-12。本页说明本仓库的来源、此前交流和不同方案的适用边界。当前公开仓库名为 `claude-environment-deploy`，`virtual-pc-setup` 是此前教程包名称，历史副本保留原名。
 
 ## 维护者的来源声明
 
@@ -27,7 +27,7 @@
 
 下表按本项目 2026-11-12 提供的内容，以及 Claude-Cage 的固定提交 [`b598e2ee1c90`](https://github.com/Lee-xeo/Claude-Cage/commit/b598e2ee1c90145bd294bd9643f0196a6a96717f) 核对。它是文档与部分源码的静态比较，不是双方产品的实机性能或安全评测。
 
-| 对比项 | virtual-pc-setup | Claude-Cage |
+| 对比项 | claude-environment-deploy（原 virtual-pc-setup） | Claude-Cage |
 | --- | --- | --- |
 | 交付形式 | 教程、Agent 执行说明、5 个辅助入口及 1 个共享帮助文件 | 集成虚拟环境、浏览器、终端、编辑器等入口的桌面工作台 |
 | 虚拟机路线 | Windows x64 主机使用 Hyper-V；Mac 路线使用 Fusion 等软件，来宾仍为 Windows | 当前公开说明支持 macOS、Windows、Linux 客机，受主机平台与构建版本限制；不能沿用早期截图“只有轻量 Linux”的描述 |
