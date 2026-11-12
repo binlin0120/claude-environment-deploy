@@ -1,0 +1,46 @@
+name: Offline PowerShell checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse PowerShell sources
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          foreach ($file in Get-ChildItem skills,tests -Recurse -Filter '*.ps1') {
+            $tokens = $null
+            $parseErrors = $null
+            [void][System.Management.Automation.Language.Parser]::ParseFile($file.FullName, [ref]$tokens, [ref]$parseErrors)
+            if ($parseErrors.Count) { throw "Syntax errors in $($file.Name)" }
+          }
+      - name: Run standalone offline mocks
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          # Production scripts intentionally restrict output to D:\Codex.
+          # Stage the tests there; never invoke a real deployment command.
+          $stage = Join-Path 'D:\Codex' "ci-$env:GITHUB_RUN_ID-$env:GITHUB_RUN_ATTEMPT"
+          if (Test-Path -LiteralPath $stage) { throw 'Test staging directory already exists' }
+          New-Item -ItemType Directory -Path $stage -Force | Out-Null
+          Copy-Item -LiteralPath 'tests','skills' -Destination $stage -Recurse
+          foreach ($name in 'Test-ScriptBehavior.ps1','Test-GuestNetworkBehavior.ps1','Test-HostPathBehavior.ps1') {
+            $output = & pwsh -NoProfile -NonInteractive -File (Join-Path $stage "tests/$name") 2>&1 | Out-String
+            $code = $LASTEXITCODE
+            Write-Output $output
+            if ($code -ne 0) { throw "Offline test process failed: $name" }
+            $offset = $output.IndexOf('{')
+            if ($offset -lt 0) { throw "Missing JSON report: $name" }
+            $report = $output.Substring($offset) | ConvertFrom-Json
+            if ($null -eq $report.failed -or $report.failed -ne 0) { throw "Offline test cases failed: $name" }
+          }

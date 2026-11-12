@@ -1,0 +1,1666 @@
+{
+  "release": "完整配置修正版10",
+  "checked_at_utc": "2026-11-07T06:15:53.499635+00:00",
+  "verification_level": "offline_behavior_and_local_proxy_transport",
+  "network_changed": false,
+  "public_requests_made": false,
+  "real_vm_deployment_tested": false,
+  "behavior_checks": {
+    "powershell.exe": [
+      {
+        "powershell": "5.1.28000.2113",
+        "admin": true,
+        "total": 62,
+        "failed": 0,
+        "results": [
+          {
+            "test": "normal",
+            "passed": true,
+            "detail": "Default plan performs no mutation"
+          },
+          {
+            "test": "whatif",
+            "passed": true,
+            "detail": "WhatIf performs no mutation"
+          },
+          {
+            "test": "existing-vm",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "existing-folder",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "junction",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "missing-command",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "missing-iso",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "missing-switch",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "creation-failure",
+            "passed": true,
+            "detail": "Partial creation reports exact failed step and does not delete assets"
+          },
+          {
+            "test": "outside-root",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "normalized-outside",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "prefix-collision",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "mock-apply",
+            "passed": true,
+            "detail": "Successful mock Apply creates stopped VM only"
+          },
+          {
+            "test": "egress-normal",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-country-mismatch",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-network-failure",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-network-failure",
+            "passed": true,
+            "detail": "Uncertain request failures stay unknown"
+          },
+          {
+            "test": "egress-single-request-failure",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-single-request-failure",
+            "passed": true,
+            "detail": "Uncertain request failures stay unknown"
+          },
+          {
+            "test": "egress-invalid-country",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-missing-ip",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-missing-country",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-invalid-ip",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-different-ip",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-duplicate-ip",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-html",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-html-as-text",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-empty-response",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-non-string-response",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-http-403",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-http-403",
+            "passed": true,
+            "detail": "Rejected HTTP status is reported without the response body"
+          },
+          {
+            "test": "egress-http-204",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-http-204",
+            "passed": true,
+            "detail": "Rejected HTTP status is reported without the response body"
+          },
+          {
+            "test": "egress-redirect",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-redirect",
+            "passed": true,
+            "detail": "Rejected HTTP status is reported without the response body"
+          },
+          {
+            "test": "egress-sensitive-error",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-sensitive-error",
+            "passed": true,
+            "detail": "Uncertain request failures stay unknown"
+          },
+          {
+            "test": "egress-timeout",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-timeout",
+            "passed": true,
+            "detail": "WebException Timeout supports timeout classification"
+          },
+          {
+            "test": "egress-tls-failure",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-tls",
+            "passed": true,
+            "detail": "AuthenticationException supports TLS classification"
+          },
+          {
+            "test": "egress-canceled",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-canceled",
+            "passed": true,
+            "detail": "Uncertain request failures stay unknown"
+          },
+          {
+            "test": "egress-expected-exit-match",
+            "passed": true,
+            "detail": "Expected address compared only in memory"
+          },
+          {
+            "test": "egress-expected-exit-mismatch",
+            "passed": true,
+            "detail": "Expected address compared only in memory"
+          },
+          {
+            "test": "egress-optional-country",
+            "passed": true,
+            "detail": "Expected exit is required; country may be omitted; report limits evidence to one source"
+          },
+          {
+            "test": "egress-expected-country-mismatch",
+            "passed": true,
+            "detail": "Unexpected country ends the run after recording the sample"
+          },
+          {
+            "test": "egress-ipv6-equivalent",
+            "passed": true,
+            "detail": "Equivalent IPv6 forms compare without reporting addresses"
+          },
+          {
+            "test": "egress-invalid-expected-ip",
+            "passed": true,
+            "detail": "Invalid expected address rejected before requests without repeating its value"
+          },
+          {
+            "test": "egress-invalid-expected-ip",
+            "passed": true,
+            "detail": "Invalid expected address rejected before requests without repeating its value"
+          },
+          {
+            "test": "egress-invalid-expected-ip",
+            "passed": true,
+            "detail": "Invalid expected address rejected before requests without repeating its value"
+          },
+          {
+            "test": "egress-certificate-validation-normal",
+            "passed": true,
+            "detail": "Permissive callback is disabled while requests run and the exact prior callback is restored"
+          },
+          {
+            "test": "egress-certificate-validation-network-failure",
+            "passed": true,
+            "detail": "Permissive callback is disabled while requests run and the exact prior callback is restored"
+          },
+          {
+            "test": "egress-missing-input",
+            "passed": true,
+            "detail": "Unsafe or incomplete local evidence prevents all web requests."
+          },
+          {
+            "test": "egress-unguarded-outbound",
+            "passed": true,
+            "detail": "Unsafe or incomplete local evidence prevents all web requests."
+          },
+          {
+            "test": "egress-unguarded-proxy",
+            "passed": true,
+            "detail": "Unsafe or incomplete local evidence prevents all web requests."
+          },
+          {
+            "test": "egress-audit-error",
+            "passed": true,
+            "detail": "Unsafe or incomplete local evidence prevents all web requests."
+          },
+          {
+            "test": "egress-owner-switch",
+            "passed": true,
+            "detail": "Changed proxy owner fails that sample without making an unproxied request."
+          },
+          {
+            "test": "egress-live-log",
+            "passed": true,
+            "detail": "TLS failure and later success are written separately without raw addresses."
+          },
+          {
+            "test": "egress-log-no-overwrite",
+            "passed": true,
+            "detail": "Existing sample log is preserved and no probe is sent."
+          },
+          {
+            "test": "egress-log-outside-root",
+            "passed": true,
+            "detail": "Reject file output outside D:\\Codex before requesting the endpoint."
+          },
+          {
+            "test": "prereq-readonly",
+            "passed": true,
+            "detail": "CIM/Hyper-V calls mocked; no report file requested"
+          }
+        ]
+      },
+      {
+        "powershell": "5.1.28000.2113",
+        "total": 75,
+        "failed": 0,
+        "results": [
+          {
+            "test": "normal",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "default-no-evidence",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "core-missing",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "tun-down",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "profile-allow",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "firewall-unreadable",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "incomplete-filter",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "core-wide",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "wrong-hop",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "browser-wide",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "other-package",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "protected-package",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "service-restricted",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "user-restricted",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "selection-conflict",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "node-nested-change",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "node-order",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "yaml-no-parser",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "dns-disabled",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "dns-unpinned",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "invalid-sensitive-bool",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "no-runtime",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "hop-any",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "hop-cidr",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "hop-range",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "hop-port-zero",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "hop-port-high",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "tun-disabled",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "tun-missing",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "node-name-only",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "node-uuid-missing",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "node-unsupported",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "node-null-field",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "unicode-names",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "selection-missing-with-conflict",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "freshness-missing",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "freshness-stale",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "freshness-future",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "freshness-invalid-max",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "batch-node-change",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "batch-node-missing",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "approved-chain-override",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "forbidden-auth-override",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "persisted-drift",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "block-first-hop",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "block-restricted",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "api-not-configured",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "socket-match",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "socket-none",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "socket-other",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "api-read",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-ipv6",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-nonloopback",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-hostname",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-owner-wrong",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-invalid-port",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-invalid-secret",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-redirect",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-request-failure",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-invalid-json",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-oversized",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "runtime-api-match",
+            "passed": true,
+            "detail": "Offline integration: live-group precedence, mode/TUN consistency, established TCP matching and private output"
+          },
+          {
+            "test": "runtime-api-mode-conflict",
+            "passed": true,
+            "detail": "Offline integration: live-group precedence, mode/TUN consistency, established TCP matching and private output"
+          },
+          {
+            "test": "runtime-api-tun-conflict",
+            "passed": true,
+            "detail": "Offline integration: live-group precedence, mode/TUN consistency, established TCP matching and private output"
+          },
+          {
+            "test": "runtime-api-missing-settings",
+            "passed": true,
+            "detail": "Offline integration: live-group precedence, mode/TUN consistency, established TCP matching and private output"
+          },
+          {
+            "test": "runtime-api-groups-conflict",
+            "passed": true,
+            "detail": "Offline integration: live-group precedence, mode/TUN consistency, established TCP matching and private output"
+          },
+          {
+            "test": "runtime-api-failed",
+            "passed": true,
+            "detail": "Offline integration: live-group precedence, mode/TUN consistency, established TCP matching and private output"
+          },
+          {
+            "test": "split-first-hop",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          },
+          {
+            "test": "missing-approved-hop",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          },
+          {
+            "test": "extra-address",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          },
+          {
+            "test": "broad-prefix",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          },
+          {
+            "test": "proxy-pass",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          },
+          {
+            "test": "probe-listener-unavailable",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          },
+          {
+            "test": "probe-listener-wrong-owner",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          },
+          {
+            "test": "probe-listener-wildcard",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          }
+        ]
+      },
+      {
+        "powershell": "5.1.28000.2113",
+        "total": 17,
+        "failed": 0,
+        "results": [
+          {
+            "test": "direct",
+            "passed": true
+          },
+          {
+            "test": "other-policy",
+            "passed": true
+          },
+          {
+            "test": "intentional-upstream",
+            "passed": true
+          },
+          {
+            "test": "wrong-policy-prefix",
+            "passed": true
+          },
+          {
+            "test": "stale-guest",
+            "passed": true
+          },
+          {
+            "test": "future-guest",
+            "passed": true
+          },
+          {
+            "test": "old-log",
+            "passed": true
+          },
+          {
+            "test": "before-guest",
+            "passed": true
+          },
+          {
+            "test": "missing-stamp",
+            "passed": true
+          },
+          {
+            "test": "wrong-port",
+            "passed": true
+          },
+          {
+            "test": "cidr-input",
+            "passed": true
+          },
+          {
+            "test": "missing-port",
+            "passed": true
+          },
+          {
+            "test": "error-log",
+            "passed": true
+          },
+          {
+            "test": "read-error",
+            "passed": true
+          },
+          {
+            "test": "ipv6",
+            "passed": true
+          },
+          {
+            "test": "api-denied",
+            "passed": true
+          },
+          {
+            "test": "no-evidence",
+            "passed": true
+          }
+        ]
+      }
+    ],
+    "pwsh.exe": [
+      {
+        "powershell": "7.6.5",
+        "admin": true,
+        "total": 62,
+        "failed": 0,
+        "results": [
+          {
+            "test": "normal",
+            "passed": true,
+            "detail": "Default plan performs no mutation"
+          },
+          {
+            "test": "whatif",
+            "passed": true,
+            "detail": "WhatIf performs no mutation"
+          },
+          {
+            "test": "existing-vm",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "existing-folder",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "junction",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "missing-command",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "missing-iso",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "missing-switch",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "creation-failure",
+            "passed": true,
+            "detail": "Partial creation reports exact failed step and does not delete assets"
+          },
+          {
+            "test": "outside-root",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "normalized-outside",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "prefix-collision",
+            "passed": true,
+            "detail": "Unsafe/invalid input stops before mutation"
+          },
+          {
+            "test": "mock-apply",
+            "passed": true,
+            "detail": "Successful mock Apply creates stopped VM only"
+          },
+          {
+            "test": "egress-normal",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-country-mismatch",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-network-failure",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-network-failure",
+            "passed": true,
+            "detail": "Uncertain request failures stay unknown"
+          },
+          {
+            "test": "egress-single-request-failure",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-single-request-failure",
+            "passed": true,
+            "detail": "Uncertain request failures stay unknown"
+          },
+          {
+            "test": "egress-invalid-country",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-missing-ip",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-missing-country",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-invalid-ip",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-different-ip",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-duplicate-ip",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-html",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-html-as-text",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-empty-response",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-non-string-response",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-http-403",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-http-403",
+            "passed": true,
+            "detail": "Rejected HTTP status is reported without the response body"
+          },
+          {
+            "test": "egress-http-204",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-http-204",
+            "passed": true,
+            "detail": "Rejected HTTP status is reported without the response body"
+          },
+          {
+            "test": "egress-redirect",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-redirect",
+            "passed": true,
+            "detail": "Rejected HTTP status is reported without the response body"
+          },
+          {
+            "test": "egress-sensitive-error",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-sensitive-error",
+            "passed": true,
+            "detail": "Uncertain request failures stay unknown"
+          },
+          {
+            "test": "egress-timeout",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-timeout",
+            "passed": true,
+            "detail": "WebException Timeout supports timeout classification"
+          },
+          {
+            "test": "egress-tls-failure",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-tls",
+            "passed": true,
+            "detail": "AuthenticationException supports TLS classification"
+          },
+          {
+            "test": "egress-canceled",
+            "passed": true,
+            "detail": "Three fixed-endpoint requests; strict response checks; no address/message leakage; request policy and TLS state restored"
+          },
+          {
+            "test": "egress-stage-canceled",
+            "passed": true,
+            "detail": "Uncertain request failures stay unknown"
+          },
+          {
+            "test": "egress-expected-exit-match",
+            "passed": true,
+            "detail": "Expected address compared only in memory"
+          },
+          {
+            "test": "egress-expected-exit-mismatch",
+            "passed": true,
+            "detail": "Expected address compared only in memory"
+          },
+          {
+            "test": "egress-optional-country",
+            "passed": true,
+            "detail": "Expected exit is required; country may be omitted; report limits evidence to one source"
+          },
+          {
+            "test": "egress-expected-country-mismatch",
+            "passed": true,
+            "detail": "Unexpected country ends the run after recording the sample"
+          },
+          {
+            "test": "egress-ipv6-equivalent",
+            "passed": true,
+            "detail": "Equivalent IPv6 forms compare without reporting addresses"
+          },
+          {
+            "test": "egress-invalid-expected-ip",
+            "passed": true,
+            "detail": "Invalid expected address rejected before requests without repeating its value"
+          },
+          {
+            "test": "egress-invalid-expected-ip",
+            "passed": true,
+            "detail": "Invalid expected address rejected before requests without repeating its value"
+          },
+          {
+            "test": "egress-invalid-expected-ip",
+            "passed": true,
+            "detail": "Invalid expected address rejected before requests without repeating its value"
+          },
+          {
+            "test": "egress-certificate-validation-normal",
+            "passed": true,
+            "detail": "Permissive callback is disabled while requests run and the exact prior callback is restored"
+          },
+          {
+            "test": "egress-certificate-validation-network-failure",
+            "passed": true,
+            "detail": "Permissive callback is disabled while requests run and the exact prior callback is restored"
+          },
+          {
+            "test": "egress-missing-input",
+            "passed": true,
+            "detail": "Unsafe or incomplete local evidence prevents all web requests."
+          },
+          {
+            "test": "egress-unguarded-outbound",
+            "passed": true,
+            "detail": "Unsafe or incomplete local evidence prevents all web requests."
+          },
+          {
+            "test": "egress-unguarded-proxy",
+            "passed": true,
+            "detail": "Unsafe or incomplete local evidence prevents all web requests."
+          },
+          {
+            "test": "egress-audit-error",
+            "passed": true,
+            "detail": "Unsafe or incomplete local evidence prevents all web requests."
+          },
+          {
+            "test": "egress-owner-switch",
+            "passed": true,
+            "detail": "Changed proxy owner fails that sample without making an unproxied request."
+          },
+          {
+            "test": "egress-live-log",
+            "passed": true,
+            "detail": "TLS failure and later success are written separately without raw addresses."
+          },
+          {
+            "test": "egress-log-no-overwrite",
+            "passed": true,
+            "detail": "Existing sample log is preserved and no probe is sent."
+          },
+          {
+            "test": "egress-log-outside-root",
+            "passed": true,
+            "detail": "Reject file output outside D:\\Codex before requesting the endpoint."
+          },
+          {
+            "test": "prereq-readonly",
+            "passed": true,
+            "detail": "CIM/Hyper-V calls mocked; no report file requested"
+          }
+        ]
+      },
+      {
+        "powershell": "7.6.5",
+        "total": 75,
+        "failed": 0,
+        "results": [
+          {
+            "test": "normal",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "default-no-evidence",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "core-missing",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "tun-down",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "profile-allow",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "firewall-unreadable",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "incomplete-filter",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "core-wide",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "wrong-hop",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "browser-wide",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "other-package",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "protected-package",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "service-restricted",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "user-restricted",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "selection-conflict",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "node-nested-change",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "node-order",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "yaml-no-parser",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "dns-disabled",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "dns-unpinned",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "invalid-sensitive-bool",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "no-runtime",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "hop-any",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "hop-cidr",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "hop-range",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "hop-port-zero",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "hop-port-high",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "tun-disabled",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "tun-missing",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "node-name-only",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "node-uuid-missing",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "node-unsupported",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "node-null-field",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "unicode-names",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "selection-missing-with-conflict",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "freshness-missing",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "freshness-stale",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "freshness-future",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "freshness-invalid-max",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "batch-node-change",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "batch-node-missing",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "approved-chain-override",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "forbidden-auth-override",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "persisted-drift",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "block-first-hop",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "block-restricted",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "api-not-configured",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "socket-match",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "socket-none",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "socket-other",
+            "passed": true,
+            "detail": "Offline mocks; status, UTF8 reading, private-value omission and live-acceptance limits checked"
+          },
+          {
+            "test": "api-read",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-ipv6",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-nonloopback",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-hostname",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-owner-wrong",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-invalid-port",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-invalid-secret",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-redirect",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-request-failure",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-invalid-json",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "api-oversized",
+            "passed": true,
+            "detail": "Offline API transport: fixed GETs, verified owner, loopback, no proxy, no redirects, bounded response and redacted failures"
+          },
+          {
+            "test": "runtime-api-match",
+            "passed": true,
+            "detail": "Offline integration: live-group precedence, mode/TUN consistency, established TCP matching and private output"
+          },
+          {
+            "test": "runtime-api-mode-conflict",
+            "passed": true,
+            "detail": "Offline integration: live-group precedence, mode/TUN consistency, established TCP matching and private output"
+          },
+          {
+            "test": "runtime-api-tun-conflict",
+            "passed": true,
+            "detail": "Offline integration: live-group precedence, mode/TUN consistency, established TCP matching and private output"
+          },
+          {
+            "test": "runtime-api-missing-settings",
+            "passed": true,
+            "detail": "Offline integration: live-group precedence, mode/TUN consistency, established TCP matching and private output"
+          },
+          {
+            "test": "runtime-api-groups-conflict",
+            "passed": true,
+            "detail": "Offline integration: live-group precedence, mode/TUN consistency, established TCP matching and private output"
+          },
+          {
+            "test": "runtime-api-failed",
+            "passed": true,
+            "detail": "Offline integration: live-group precedence, mode/TUN consistency, established TCP matching and private output"
+          },
+          {
+            "test": "split-first-hop",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          },
+          {
+            "test": "missing-approved-hop",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          },
+          {
+            "test": "extra-address",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          },
+          {
+            "test": "broad-prefix",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          },
+          {
+            "test": "proxy-pass",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          },
+          {
+            "test": "probe-listener-unavailable",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          },
+          {
+            "test": "probe-listener-wrong-owner",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          },
+          {
+            "test": "probe-listener-wildcard",
+            "passed": true,
+            "detail": "Exact approved addresses may be split across rules; proxy must belong to the expected core and listen locally."
+          }
+        ]
+      },
+      {
+        "powershell": "7.6.5",
+        "total": 17,
+        "failed": 0,
+        "results": [
+          {
+            "test": "direct",
+            "passed": true
+          },
+          {
+            "test": "other-policy",
+            "passed": true
+          },
+          {
+            "test": "intentional-upstream",
+            "passed": true
+          },
+          {
+            "test": "wrong-policy-prefix",
+            "passed": true
+          },
+          {
+            "test": "stale-guest",
+            "passed": true
+          },
+          {
+            "test": "future-guest",
+            "passed": true
+          },
+          {
+            "test": "old-log",
+            "passed": true
+          },
+          {
+            "test": "before-guest",
+            "passed": true
+          },
+          {
+            "test": "missing-stamp",
+            "passed": true
+          },
+          {
+            "test": "wrong-port",
+            "passed": true
+          },
+          {
+            "test": "cidr-input",
+            "passed": true
+          },
+          {
+            "test": "missing-port",
+            "passed": true
+          },
+          {
+            "test": "error-log",
+            "passed": true
+          },
+          {
+            "test": "read-error",
+            "passed": true
+          },
+          {
+            "test": "ipv6",
+            "passed": true
+          },
+          {
+            "test": "api-denied",
+            "passed": true
+          },
+          {
+            "test": "no-evidence",
+            "passed": true
+          }
+        ]
+      }
+    ]
+  },
+  "syntax_checks": {
+    "powershell.exe": {
+      "version": "5.1.28000.2113",
+      "total": 9,
+      "bad": 0,
+      "scripts": [
+        {
+          "file": "skills/claude-environment-deploy/scripts/New-ClaudeVM.ps1",
+          "errors": []
+        },
+        {
+          "file": "skills/claude-environment-deploy/scripts/Read-ClaudeCoreApi.ps1",
+          "errors": []
+        },
+        {
+          "file": "skills/claude-environment-deploy/scripts/Test-ClaudeEgress.ps1",
+          "errors": []
+        },
+        {
+          "file": "skills/claude-environment-deploy/scripts/Test-ClaudeGuestNetwork.ps1",
+          "errors": []
+        },
+        {
+          "file": "skills/claude-environment-deploy/scripts/Test-ClaudeHostPath.ps1",
+          "errors": []
+        },
+        {
+          "file": "skills/claude-environment-deploy/scripts/Test-ClaudePrerequisites.ps1",
+          "errors": []
+        },
+        {
+          "file": "tests/Test-GuestNetworkBehavior.ps1",
+          "errors": []
+        },
+        {
+          "file": "tests/Test-HostPathBehavior.ps1",
+          "errors": []
+        },
+        {
+          "file": "tests/Test-ScriptBehavior.ps1",
+          "errors": []
+        }
+      ]
+    },
+    "pwsh.exe": {
+      "version": "7.6.5",
+      "total": 9,
+      "bad": 0,
+      "scripts": [
+        {
+          "file": "skills/claude-environment-deploy/scripts/New-ClaudeVM.ps1",
+          "errors": []
+        },
+        {
+          "file": "skills/claude-environment-deploy/scripts/Read-ClaudeCoreApi.ps1",
+          "errors": []
+        },
+        {
+          "file": "skills/claude-environment-deploy/scripts/Test-ClaudeEgress.ps1",
+          "errors": []
+        },
+        {
+          "file": "skills/claude-environment-deploy/scripts/Test-ClaudeGuestNetwork.ps1",
+          "errors": []
+        },
+        {
+          "file": "skills/claude-environment-deploy/scripts/Test-ClaudeHostPath.ps1",
+          "errors": []
+        },
+        {
+          "file": "skills/claude-environment-deploy/scripts/Test-ClaudePrerequisites.ps1",
+          "errors": []
+        },
+        {
+          "file": "tests/Test-GuestNetworkBehavior.ps1",
+          "errors": []
+        },
+        {
+          "file": "tests/Test-HostPathBehavior.ps1",
+          "errors": []
+        },
+        {
+          "file": "tests/Test-ScriptBehavior.ps1",
+          "errors": []
+        }
+      ]
+    }
+  },
+  "loopback_transport_checks": [
+    {
+      "shell": "powershell.exe",
+      "sent_connect_to_explicit_loopback_proxy": true,
+      "proxy_returned_502": true,
+      "external_requests_made": false
+    },
+    {
+      "shell": "pwsh.exe",
+      "sent_connect_to_explicit_loopback_proxy": true,
+      "proxy_returned_502": true,
+      "external_requests_made": false
+    }
+  ]
+}

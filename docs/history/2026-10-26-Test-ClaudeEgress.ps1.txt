@@ -1,0 +1,31 @@
+﻿#requires -Version 5.1
+[CmdletBinding()]
+param([ValidatePattern('^[A-Za-z]{2}$')][string]$ExpectedCountry)
+$ErrorActionPreference='Stop'
+$results = @()
+$oldProtocol = [Net.ServicePointManager]::SecurityProtocol
+try {
+    [Net.ServicePointManager]::SecurityProtocol = $oldProtocol -bor [Net.SecurityProtocolType]::Tls12
+    foreach ($endpoint in @('https://ipwho.is/','https://api.country.is/')) {
+        try {
+            $response = Invoke-RestMethod -Uri $endpoint -Method Get -TimeoutSec 15
+            $country = if($endpoint -eq 'https://ipwho.is/') { $response.country_code } else { $response.country }
+            if ($country -notmatch '^[A-Za-z]{2}$') { throw 'No valid country code in response.' }
+            $results += [pscustomobject]@{endpoint=$endpoint;request_succeeded=$true;country=$country.ToUpperInvariant();error_type=$null}
+        } catch {
+            $results += [pscustomobject]@{endpoint=$endpoint;request_succeeded=$false;country=$null;error_type=$_.Exception.GetType().Name}
+        }
+    }
+} finally { [Net.ServicePointManager]::SecurityProtocol = $oldProtocol }
+$successes=@($results | Where-Object request_succeeded)
+$countries=@($successes | Select-Object -ExpandProperty country -Unique)
+$consistent=($successes.Count -eq 2 -and $countries.Count -eq 1)
+$expectedMatch=$null
+if($ExpectedCountry) { $expectedMatch=($consistent -and $countries[0] -eq $ExpectedCountry.ToUpperInvariant()) }
+[ordered]@{
+    checked_at_utc=[DateTime]::UtcNow.ToString('o')
+    scope='Current PowerShell process, two fresh HTTPS requests only'
+    results=$results; country_consistent=$consistent; expected_country=$ExpectedCountry; expected_country_matches=$expectedMatch
+    public_ip_recorded=$false
+    not_tested=@('Browser DNS/WebRTC/IPv6','Claude login and conversation','Proxy failure protection','Restart and update behavior','Physical location or service eligibility','Residential IP classification')
+} | ConvertTo-Json -Depth 5

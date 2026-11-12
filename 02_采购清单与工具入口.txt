@@ -1,0 +1,117 @@
+﻿# 采购清单与工具入口
+
+先看《01_用户须知》，再看这份清单。先检查已有条件，再按缺少的项目准备，不需要把下面每项都买一遍。
+
+## 部署前要准备什么
+
+| 项目 | 需要准备什么 | 是否需要花钱 |
+| --- | --- | --- |
+| 电脑 | 自己的 Windows 或 Mac，先让 Codex 检查版本、内存和磁盘空间。 | 已有合适电脑就不用另买。 |
+| 虚拟电脑软件 | Windows 按条件使用 Hyper-V；Mac 按芯片和系统选择虚拟电脑软件。 | 先核对已有软件与所选方案的授权，不默认购买。 |
+| Windows 安装文件与授权 | 使用与电脑芯片匹配的原版安装文件；实体电脑与虚拟电脑的授权分别核对。 | 安装文件与产品授权分开看；缺少有效授权时再确认购买。 |
+| 网络 | 先检查已有网络；按方案选择自建 VPS（租来的远程服务器）或现成网络服务。 | 已有服务能复用就不重复买；两条路线按需要选。 |
+| 单独的出口地址 | 只有选定方案确实需要时，再评估住宅出口或独享 IP（网站看到的上网地址）。 | 按需，不是人人必买，也不代表满足服务使用资格。 |
+| 专用浏览器 | 选用 AdsPower 路线时再准备专用浏览器，先核对所需功能与当前套餐。 | 按功能需要确认，不默认购买付费套餐。 |
+| Claude 账号与订阅 | 由本人在官方渠道按服务资格注册、登录；需要付费功能时再查看官方订阅。 | 是否订阅由实际需求决定；本清单不再提供第三方账号或代购订阅入口。 |
+
+具体工具与参考入口在下面。各项价格、使用资格、续费、退款和维护成本由本人在购买前核对；本清单不承诺商家信誉或使用结果。
+
+## 致谢
+
+搭建 Hyper-V 的方法，是跟着 技术爬爬虾 @tech-shrimp（https://www.youtube.com/@tech-shrimp） 的 详细安装视频（https://www.youtube.com/watch?v=aWuRz90MHF0） 学的。VPS、网络服务和相关资料，参考了 余温 @gkxspace（https://x.com/gkxspace） 的 Claude 使用环境教程（https://x.com/gkxspace/status/2101993381303820704）。感谢两位公开分享。
+
+也感谢这些分享者：
+
+- @app_sail（https://x.com/app_sail）
+- @suyuan1711（https://x.com/suyuan1711）
+- @Nemo001ai（https://x.com/Nemo001ai）
+- 逸尘 @gengdaJ（https://x.com/gengdaJ）
+- @zureA255062（https://x.com/zureA255062）
+- @leo_xiaolei（https://x.com/leo_xiaolei）
+- @JANEX0609（https://x.com/JANEX0609）
+
+我们学习了这些方法，再按自己的使用过程编写了教程和脚本。文中的操作和测试结果由我们自己核对。
+
+## 工具和购买入口
+
+这一页把可能用到的工具、购买入口和学习资料放在一起，每个链接旁边都写了用途。**这些网站只是参考推荐，不是指定商家，也不是必买清单。你已经有可用的服务，可以继续用；也可以自己找其他供应商。**
+
+先让 Codex 按 完整教程（docs/完整教程.md） 检查你已有的电脑和服务，再判断缺哪一项。需要购买时，你选服务、登录商家账号并付款；配置和排错交给 Codex。选了其他商家，就把它的官网和公开部署教程交给 Codex 核对，不必照抄这里某家商店的套餐或设置。VPS、住宅出口和指纹浏览器都不是人人必买。
+
+## 先分清买的是什么
+
+| 选择 | 大白话说明 |
+| --- | --- |
+| 使用已有网络 | 现有环境满足官方服务条件、实际使用也正常，就不必再买一套。 |
+| 自建 VPS | 租一台远程服务器，自己或让 Agent 配置网络服务，之后也要自己维护。 |
+| 购买现成网络服务 | 使用供应商配置好的服务，把订阅导入合适的客户端；通常不需要为同一路线再租 VPS。 |
+
+VPS 是服务器，IP 是网络出口地址，两者不是同一种商品。商品写着“住宅”或“独享”，也不能直接推断它适合 Claude。购买前看清地区、协议、流量、续费、退款和维护成本；出口显示的国家不会改变实际所在地或官方服务资格。
+
+## 完整隔离方案的工具
+
+| 链接 | 用途 |
+| --- | --- |
+| Mac 原版下载入口（skills/claude-environment-deploy/references/Mac部署流程.md#2-选择虚拟机软件和正式镜像） | 先查离线原版和已有授权的国内正版渠道，再考虑联网下载。内含 Fusion、Parallels、UTM 及 Windows ARM64／x64 入口。 |
+| 微软 Hyper-V 使用说明（https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v） | 检查电脑是否支持 Windows 自带的虚拟机功能，并了解启用方法。 |
+| AdsPower 官网（https://www.adspower.com/） | 下载指纹浏览器，建立并长期复用一个 Claude 专用环境；在这个环境里先登录 Claude。 |
+| Clash Verge Rev 发行页（https://github.com/clash-verge-rev/clash-verge-rev/releases） | 获取来宾内管理网络连接的客户端。安装前核对适用版本和来源，按教程验证实际流量。 |
+| Claude 官网（https://claude.ai/） | 在 AdsPower 的固定专用环境里打开，由本人完成 Claude 登录。 |
+| Claude 桌面端下载（https://claude.ai/download） | 获取官方桌面客户端；先完成指纹浏览器里的 Claude 登录，再打开桌面端。 |
+
+## VPS 与现成网络服务
+
+| 链接 | 用途 |
+| --- | --- |
+| 搬瓦工 BandwagonHost：购买入口（https://bandwagonhost.com/aff.php?aff=84473） | 租海外 VPS，用来运行自己配置的服务。链接含推广参数 aff=84473。 |
+| 搬瓦工：洛杉矶产品页（https://bandwagonhost.com/order/ecommerce/Los%20Angeles/USCA_9） | 查看这一地区的服务器产品、价格和库存，再判断是否适合自己的预算。 |
+| IPEqual：服务入口（https://www.equaldcdn.com/?ref=c1270cd15a） | 查看现成网络服务，了解套餐及客户端导入方式。链接含推荐参数 ref=c1270cd15a。 |
+| VoyraCloud：购买入口（https://www.voyracloud.com/?ref_code=KZJXH37H） | 查看 VPS 和其他网络产品。链接含推荐参数 ref_code=KZJXH37H。 |
+| VoyraCloud：Cloud VPS（https://www.voyracloud.com/cloud-vps） | 查看普通云服务器，适合评估自建服务路线。 |
+| VoyraCloud：Residential IP VPS（https://www.voyracloud.com/residential-ip-vps） | 查看以住宅 IP 命名的服务器产品，购买时还要核对实际交付的网络和使用条件。 |
+| VoyraCloud：Windows VPS（https://www.voyracloud.com/windows-vps） | 查看远程 Windows 服务器。它运行在商家机房，与自己电脑上的 Hyper-V 虚拟机是两种方案。 |
+| VoyraCloud：Dynamic Residential Gateway（https://www.voyracloud.com/dynamic-residential-gateway） | 查看动态住宅出口产品，先弄清出口变化方式和连接方法，再判断是否需要。 |
+| VoyraCloud：使用指南（https://docs.voyracloud.com/docs） | 让 Agent 先读产品创建、连接和管理说明，再制定部署步骤。 |
+
+上面有些链接带分享者的推广或推荐参数，已在用途栏注明。按自己的需要选，不用每样都买；价格、套餐和退款条件以商家当前页面为准。下单和付款自己完成，给 Agent 看公开说明就行，密码和订阅凭据留在本机。
+
+## 网络配置工具与教程
+
+| 链接 | 用途 |
+| --- | --- |
+| VPS 节点搭建教程（https://x.com/gengdaJ/status/2036803153841328388） | 学习租好服务器后怎样配置网络连接。可以交给 Agent 阅读，先检查安装软件、权限、端口和回退方法。 |
+| 3x-ui 上游仓库（https://github.com/mhsanaei/3x-ui） | 查看节点管理软件的代码、安装说明和版本。需要管理界面时，再评估是否采用。 |
+| 网络分流教程（https://x.com/gkxspace/status/2094386340645216468） | 学习为不同网站选择直连或代理，减少不必要的流量。 |
+| Shadowrocket 规则库（https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever） | 查看 Shadowrocket 的分流规则。规则格式与 Clash Verge Rev 不同，不能直接混用。 |
+| v2rayN：Windows 下载（https://github.com/2dust/v2rayN/releases） | Windows 网络客户端入口。根据所选方案使用一种合适的客户端，不必把教程出现的软件全部安装。 |
+| v2rayNG：Android 下载（https://github.com/2dust/v2rayNG/releases） | 安卓网络客户端入口，仅在还需要配置手机时查看。 |
+
+配置时要分清 TUN 和系统代理：TUN 通过虚拟网卡处理流量，系统代理主要影响遵从代理设置的软件。选哪一种取决于本次目标，不能把几篇教程的设置直接拼在一起。最终都要分别验证实际使用的软件、代理故障时的新连接，以及重启后的配置，不能只看开关是否开启。
+
+## 使用前检测与可选防护
+
+| 链接 | 用途 |
+| --- | --- |
+| Claude 网络检测页（https://ip.net.coffee/claude/） | 建议每次使用前，在实际使用的浏览器环境里检查网络出口、DNS、WebRTC 和时区。第三方分数供参考，不代表账号、桌面端或连续聊天已验证。 |
+| claude-switcher（https://github.com/YOURSJEYO/claude-switcher） | 可选工具。Windows 测试版带有定期检查代理状态、异常后关闭 Claude 桌面进程的看守；我们没在本环境安装使用，不保护 AdsPower 网页，也不能代替网络阻断。 |
+
+具体怎么检查、有哪些限制，以及安装前要考虑什么，见 使用前检测与可选防护（skills/claude-environment-deploy/references/使用前检测与可选防护.md）。两项都不是官方资格证明；可选防护不作为本教程的必装项。
+
+## 其他资料：按需查看
+
+这些链接供已有相关需求的人阅读，不是安装 Claude 的前置清单。
+
+| 链接 | 用途 |
+| --- | --- |
+| 设备清理 Skill（https://github.com/suyuan2022/suyuan-skill/blob/main/claude-cleanup/SKILL.md） | 了解第三方整理的设备清理方法。清理可能删除现有数据，先审查具体动作、备份和恢复办法，再决定是否执行。 |
+| Apple ID 与礼品卡付款资料（https://x.com/zureA255062/status/2103672988524855361） | 了解相关付款方式，按本人账户的地区和支付条件判断。 |
+| 支付方式整理（https://x.com/Nemo001ai/status/2072882143336767816） | 比较其他支付选择，重点核对费用、适用地区和退款条件。 |
+| Starryblu：服务入口（https://sg.starryblu.com/x/6RtMh9c0） | 查看支付卡服务，只有确有支付需求时才需要了解。 |
+| Starryblu：短链对应页面（https://www.starryblu.com/launchIndex?inviteCode=MQFK01Q） | 同一支付服务的落地页，含邀请参数 inviteCode=MQFK01Q。 |
+| 相关申请表（https://docs.qq.com/form/page/DRmhsUEFHbUZhYkx5） | 查看关联的申请入口；填写前先确认用途、收集方和需要提交的信息。 |
+| 设备使用补充资料（https://x.com/gkxspace/status/2108522433917702540） | 了解另一种设备配置思路，用于比较是否符合自己的需求。 |
+| 身份核验资料（https://x.com/gengdaJ/status/2103049745984037061） | 了解身份核验话题。身份、地址和账号信息应使用本人真实且符合要求的资料。 |
+
+## 使用这些链接前
+
+整理日期：2026-11-12。以下保留入口没有逐个买来测试，也没有读完所有延伸资料、视频字幕和评论。商品、价格和短链指向都可能变化，购买前再确认一次。作者分享过某个服务，也不代表服务一定适合你，更不能保证账号或付款结果。

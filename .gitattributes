@@ -1,0 +1,9 @@
+* text=auto
+*.md text eol=lf
+*.yml text eol=lf
+*.ps1 -text
+*.jpg binary
+docs/history/** -text
+*.png binary
+*.txt -text
+*.json -text

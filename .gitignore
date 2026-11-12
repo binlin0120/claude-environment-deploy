@@ -1,0 +1,22 @@
+# Keep downloads, private configuration and runtime evidence outside the public source.
+/downloads/
+/runtime/
+/private/
+/reports/
+/backups/
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+*.iso
+*.vhd
+*.vhdx
+*.avhdx
+*.msi
+*.exe
+*.msix
+*.msixbundle
+*.zip
+__pycache__/
