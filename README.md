@@ -1,5 +1,7 @@
 # Claude 使用环境部署指南
 
+> **执行提醒：** 把本仓库交给 Codex、DeepSeek Harness 等 Agent（Claude / Claude Code 除外），直接让它严格按照本包脚本及配套部署步骤执行，不自行更换方案、跳过步骤或增加无关任务。
+
 `claude-environment-deploy`（原名 `virtual-pc-setup`）是一套由 Agent 协助执行的虚拟电脑部署教程，帮助使用者准备独立的 Windows 环境，再配置网络、AdsPower 专用浏览器和所选 Claude 客户端。Windows x64 走 Hyper-V；Mac 按芯片选择 Fusion 与相应的 Windows 架构。
 
 **本仓库交付的是教程、操作 Skill 和辅助脚本，目前不是全自动安装器。** Claude 模型仍在服务商处运行。新电脑完整部署、真实断线保护和 Mac 路线仍需现场验收。
@@ -115,6 +117,7 @@ Windows 完整方案面向有可用 D 盘、硬件支持 Hyper-V 且资源足够
 以下任务针对 Windows x64。解压到 D:\Codex 下，用 Codex 打开这个文件夹，然后复制；Mac 用户使用 [Mac 流程中的任务](skills/claude-environment-deploy/references/Mac部署流程.md)，不要复制这段 Hyper-V 任务：
 
 ```text
+请严格按照本包脚本及配套部署步骤执行，不自行更换方案、跳过步骤或增加无关任务。
 请读取这个文件夹的 README.md，以及
 skills/claude-environment-deploy/SKILL.md，按 Skill 帮我部署。
 我选择完整隔离方案：Hyper-V＋来宾网络＋AdsPower 固定专用环境。
