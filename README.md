@@ -18,6 +18,8 @@
 
 ## 致谢
 
+**主要开发作者：李诗恩**
+
 Hyper-V 的搭建方法，是跟着 [技术爬爬虾 @tech-shrimp](https://www.youtube.com/@tech-shrimp) 的 [视频教程](https://www.youtube.com/watch?v=aWuRz90MHF0) 学的；VPS 和网络配置参考了 [余温 @gkxspace](https://x.com/gkxspace) 的 [分享](https://x.com/gkxspace/status/2101993381303820704)。感谢两位公开分享这些方法。Mac 分支另参考 [薛定谔的叨叨的安装视频](https://v.douyin.com/jTZQ-LRf8hM/)，并对照官方资料重写；视频安装方法不代表整套 Claude 环境已经验证。
 
 也感谢 [@app_sail](https://x.com/app_sail)、[@suyuan1711](https://x.com/suyuan1711)、[@Nemo001ai](https://x.com/Nemo001ai)、[逸尘 @gengdaJ](https://x.com/gengdaJ)、[@zureA255062](https://x.com/zureA255062)、[@leo_xiaolei](https://x.com/leo_xiaolei)、[@JANEX0609](https://x.com/JANEX0609) 的分享。相关链接放在 [工具和购买入口](02_采购清单与工具入口.md)。
