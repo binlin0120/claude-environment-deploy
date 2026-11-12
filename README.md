@@ -200,10 +200,10 @@ skills/claude-environment-deploy/SKILL.md，按 Skill 帮我部署。
 
 ## 交流与反馈
 
-项目交流 QQ 群：**1129410798**（群名：售后交流群）。可交流部署问题、使用体验和文档改进；可复现的问题也欢迎提交本仓库的 Issues。
+项目交流 QQ 群：**1129410798**（群名：交流群）。可交流部署问题、使用体验和文档改进；可复现的问题也欢迎提交本仓库的 Issues。
 
 <p>
-  <img src="assets/community-qq.png" alt="项目交流 QQ 群 1129410798 的入群二维码" width="280" />
+  <img src="assets/community-qq.jpg" alt="项目交流 QQ 群 1129410798 的入群二维码" width="280" />
 </p>
 
 二维码由维护者提供并确认可公开展示。二维码失效时可尝试搜索群号，或通过 Issues 反馈。请勿在群聊或 Issues 公开密码、订阅地址、令牌及带真实网络地址的诊断截图。
